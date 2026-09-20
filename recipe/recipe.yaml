@@ -16,7 +16,7 @@ source:
     - patches/0005-python-module-build-dep.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -31,6 +31,7 @@ requirements:
         - pybind11
         - python
   host:
+    - ${{ "libpython" if unix }}
     - fmt
     - pybind11
     - python
